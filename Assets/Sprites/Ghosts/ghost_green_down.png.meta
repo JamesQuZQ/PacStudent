@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 92340d6657c6e0b4eb0e743ad771632b
+guid: ef96fc23cf38ce74dab1915cd7a2b8a7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1778324575161951674
-    second: green_ghost_0
+      213: 1430519335306665035
+    second: ghost_green_down_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: green_ghost_0
+      name: ghost_green_down_0
       rect:
         serializedVersion: 2
         x: 0
@@ -114,8 +114,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 64adf1a883f1257e0800000000000000
-      internalID: -1778324575161951674
+      spriteID: b4c184991c93ad310800000000000000
+      internalID: 1430519335306665035
       vertices: []
       indices: 
       edges: []

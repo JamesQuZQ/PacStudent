@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 356fc0a39e8c8a042bb296426d627627
+guid: c4b63ad7d52c61143847b9a120f2098e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3185820992265427862
-    second: purple_ghost_0
+      213: -7848952953126159313
+    second: ghost_green_left_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: purple_ghost_0
+      name: ghost_green_left_0
       rect:
         serializedVersion: 2
         x: 0
@@ -114,8 +114,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 69b96f1305f463c20800000000000000
-      internalID: 3185820992265427862
+      spriteID: f2c792aefdae21390800000000000000
+      internalID: -7848952953126159313
       vertices: []
       indices: 
       edges: []
