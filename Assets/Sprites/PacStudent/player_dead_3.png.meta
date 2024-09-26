@@ -58,7 +58,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -219,14 +219,19 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      player_dead_3_0: 3766609241175189964
+      player_dead_3_1: 6989966998099970878
+      player_dead_3_2: -187397760749058509
+      player_dead_3_3: 8145461214032967194
+      player_dead_3_4: -7217729066187541793
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
