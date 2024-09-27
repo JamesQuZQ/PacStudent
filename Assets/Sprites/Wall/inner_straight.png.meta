@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 8953c460eaed1cc49bef87ff39f5e6df
+guid: 7b0e3232caf33024cbceaedb0eebe108
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5383091900556821215
-    second: outside_wall_upperleft_0
+      213: -2510476293373519475
+    second: New Piskel_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: outside_wall_upperleft_0
+      name: New Piskel_0
       rect:
         serializedVersion: 2
         x: 55
         y: 0
-        width: 73
-        height: 73
+        width: 10
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -114,8 +114,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 12d3702ff6a6b45b0800000000000000
-      internalID: -5383091900556821215
+      spriteID: d899e6cbc1ff82dd0800000000000000
+      internalID: -2510476293373519475
       vertices: []
       indices: 
       edges: []
@@ -131,7 +131,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      outside_wall_upperleft_0: -5383091900556821215
+      New Piskel_0: -2510476293373519475
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
