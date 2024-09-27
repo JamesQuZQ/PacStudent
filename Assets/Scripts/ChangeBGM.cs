@@ -2,13 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+enum BGM_Type{
+    INTRO,
+    NORMAL,
+    SCARED,
+    GHOST_EATEN,
+    STOP
+}
+
+
 public class ChangeBGM : MonoBehaviour
 {
     public AudioSource BGM;
 
-    public AudioClip normal_BGM;
+    public AudioClip NormalBGM;
 
-    const float changeBGM = 3.0f;
+    private BGM_Type bgmType;
+
+    const float changeBGM = 6.0f;
 
     private float timer;
 
@@ -16,16 +27,18 @@ public class ChangeBGM : MonoBehaviour
     void Start()
     {
         timer = 0;
+        bgmType = BGM_Type.INTRO;
     }
 
     // Update is called once per frame
     void Update()
     {
         timer += Time.deltaTime;
-        if (timer > changeBGM)
+        if (bgmType == BGM_Type.INTRO && timer > changeBGM)
         {
+            bgmType = BGM_Type.NORMAL;
             BGM.Stop();
-            BGM.clip = normal_BGM;
+            BGM.clip = NormalBGM;
             BGM.Play();
         }
     }
