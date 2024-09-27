@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ghost_pink_up_0: 8483837626377353792
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
