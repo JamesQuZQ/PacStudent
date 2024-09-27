@@ -19,7 +19,9 @@ public class PlayerMovement : MonoBehaviour
 
     private float timer;
 
-    const float changeDirection = 3.0f;
+    const float changeToHorizontalDirection = 2.0f;
+
+    const float changeToVerticalDirection = 2.5f;
 
     private float lastTime;
 
@@ -38,8 +40,10 @@ public class PlayerMovement : MonoBehaviour
             switch (direction)
             {
                 case Direction.UP:
+                    transform.position = transform.position + new Vector3(0, 0.2f);
                     break;
                 case Direction.DOWN:
+                    transform.position = transform.position + new Vector3(0, -0.2f);
                     break;
                 case Direction.LEFT:
                     transform.position = transform.position + new Vector3(-0.2f, 0);
@@ -52,22 +56,43 @@ public class PlayerMovement : MonoBehaviour
 
 
         timer += Time.deltaTime;
-        if (timer >= changeDirection)
+        if (direction == Direction.LEFT || direction == Direction.RIGHT)
         {
-            if (direction == Direction.LEFT)
+            if (timer >= changeToVerticalDirection)
             {
-                direction = Direction.RIGHT;
-                animatorController.SetTrigger("RotateRightTrigger");
+                if (direction == Direction.LEFT)
+                {
+                    direction = Direction.UP;
+                    animatorController.SetTrigger("MoveUpTrigger");
+                }
+                else
+                {
+                    direction = Direction.DOWN;
+                    animatorController.SetTrigger("MoveDownTrigger");
+                }
+                timer = 0;
+                lastTime = -0.1f;
             }
-            else if (direction == Direction.RIGHT)
-            {
-                direction = Direction.LEFT;
-                animatorController.SetTrigger("RotateLeftTrigger");
-            }
-            timer = 0;
-            lastTime = -0.1f;
         }
+        else if (direction == Direction.UP || direction == Direction.DOWN)
+        {
+            if (timer >= changeToHorizontalDirection)
+            {
+                if (direction == Direction.UP)
+                {
+                    direction = Direction.RIGHT;
+                    animatorController.SetTrigger("MoveRightTrigger");
+                }
 
+                else
+                {
+                    direction = Direction.LEFT;
+                    animatorController.SetTrigger("MoveLeftTrigger");
+                }
+                timer = 0;
+                lastTime = -0.1f;
+            }
+        }
 
             //if (Input.GetKeyDown(KeyCode.UpArrow)) 
             //{ 
