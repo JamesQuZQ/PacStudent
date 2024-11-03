@@ -17,7 +17,6 @@ public class PelletControl : MonoBehaviour
         tilemaps.Add(GameObject.Find("TopRightQuadrant").GetComponent<Tilemap>());
         tilemaps.Add(GameObject.Find("BottomLeftQuadrant").GetComponent<Tilemap>());
         tilemaps.Add(GameObject.Find("BottomRightQuadrant").GetComponent<Tilemap>());
-        Debug.Log(tilemaps[1].GetTile(new Vector3Int(-7,1,0)));
     }
 
     // Update is called once per frame
