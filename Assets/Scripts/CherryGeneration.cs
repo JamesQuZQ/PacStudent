@@ -66,6 +66,7 @@ public class CherryGeneration : MonoBehaviour
 
     }
 
+    // Conducts cherry movement
     IEnumerator CherryLerp()
     {
         float timeElapsed = 0;
@@ -73,7 +74,7 @@ public class CherryGeneration : MonoBehaviour
         float endValueX = 1 - startValueX;
         float endValueY = 1 - startValueY;
 
-
+        // Update cherry position
         while (timeElapsed < lerpDuration)
         {
             valueToLerpX = Mathf.Lerp(startValueX, endValueX, timeElapsed / lerpDuration);

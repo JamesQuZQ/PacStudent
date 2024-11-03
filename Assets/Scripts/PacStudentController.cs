@@ -56,6 +56,7 @@ public class PacStudentController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Stores user input
         if (Input.GetKeyDown(KeyCode.W))
         {
             lastInput = Direction.UP;
@@ -73,6 +74,7 @@ public class PacStudentController : MonoBehaviour
             lastInput = Direction.RIGHT;
         }
 
+        // Checks if player needs to move
         if (!isLerping)
         {
             if (IsWalkable(lastInput))
@@ -96,6 +98,7 @@ public class PacStudentController : MonoBehaviour
         }
     }
 
+    // Conducts player movement
     IEnumerator PlayerLerp()
     {
         animatorController.enabled = true;
@@ -105,6 +108,7 @@ public class PacStudentController : MonoBehaviour
         isLerping = true;
         float timeElapsed = 0;
 
+        // Records target position for movement
         switch (currentInput)
         {
             case Direction.UP:
@@ -121,6 +125,7 @@ public class PacStudentController : MonoBehaviour
                 break;
         }
 
+        // Changes player animation
         switch (currentInput)
         {
             case Direction.LEFT:
@@ -141,6 +146,7 @@ public class PacStudentController : MonoBehaviour
                 break;
         }
 
+        // Moves the player
         while (timeElapsed < lerpDuration)
         {
             valueToLerp = Mathf.Lerp(startValue, endValue, timeElapsed / lerpDuration);
@@ -171,7 +177,7 @@ public class PacStudentController : MonoBehaviour
         isLerping = false;
 
 
-        // Consume pellet
+        // Checks if grid contains pellet
         TileBase tile2Change = null;
         Tilemap map2Change = null;
         foreach (Tilemap map in tilemaps)
@@ -182,6 +188,7 @@ public class PacStudentController : MonoBehaviour
                 map2Change = map;
             }
         }
+        // Delete pellet consumed
         if (tile2Change != null && (tile2Change.name == "normal_pellet_0" || 
             tile2Change.name == "power_pellet_0_0"))
         {
@@ -201,6 +208,7 @@ public class PacStudentController : MonoBehaviour
 
     }
 
+    // Checks if the desired direction is walkable
     private bool IsWalkable(Direction input)
     {
         Vector3 position = transform.position;
